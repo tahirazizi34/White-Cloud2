@@ -1,0 +1,775 @@
+{
+  "version": 1,
+  "updated": "2026-10-20T23:06:48.847Z",
+  "categories": [
+    {
+      "id": "glass",
+      "name": "Glass & Pipes",
+      "desc": "Water pipes, hand pipes and bubblers in thick glass, plus classic wooden pipes.",
+      "glow": "#7C9CFF",
+      "law": "",
+      "order": 0,
+      "defaultType": "beaker"
+    },
+    {
+      "id": "vapes",
+      "name": "Vapes & E-Liquid",
+      "desc": "Mods, pod kits, vape pens and e-liquid in a range of flavors and nicotine strengths.",
+      "glow": "#B98CFF",
+      "law": "",
+      "order": 1,
+      "defaultType": "pod"
+    },
+    {
+      "id": "hookah",
+      "name": "Hookah & Shisha",
+      "desc": "Hookahs, coconut charcoal, shisha flavors, hoses and bowls for sessions at home.",
+      "glow": "#FF9A5A",
+      "law": "",
+      "order": 2,
+      "defaultType": "hookah"
+    },
+    {
+      "id": "grinders",
+      "name": "Grinders & Accessories",
+      "desc": "Grinders, rolling trays, storage jars and lighters.",
+      "glow": "#7ED6C8",
+      "law": "",
+      "order": 3,
+      "defaultType": "grinder"
+    },
+    {
+      "id": "tobacco",
+      "name": "Tobacco & Papers",
+      "desc": "Rolling papers, cigars, cigarillos and pipe tobacco.",
+      "glow": "#E8C27A",
+      "law": "",
+      "order": 4,
+      "defaultType": "papers"
+    },
+    {
+      "id": "botanicals",
+      "name": "Kratom & Botanicals",
+      "desc": "Labeled products with clear ingredient information. Ask at the counter for what is available today.",
+      "glow": "#8BD17C",
+      "law": "Sold only where permitted by law. Age requirements apply. We don’t make health claims about any product.",
+      "order": 5,
+      "defaultType": "pouch"
+    }
+  ],
+  "products": [
+    {
+      "id": "glass-water-pipes-1",
+      "cat": "glass",
+      "name": "Glass Water Pipes",
+      "desc": "Clear borosilicate water pipes with a stable base and removable downstem.",
+      "specs": [
+        "10–14 in",
+        "5mm glass"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1601505612614-178f7ca0077c?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "beaker",
+      "c": {
+        "a": "#6F8BFF",
+        "b": "#9FE3FF"
+      },
+      "order": 0,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "colored-glass-water-pipes-2",
+      "cat": "glass",
+      "name": "Colored Glass Water Pipes",
+      "desc": "Tinted glass pieces in a range of colors and heights.",
+      "specs": [
+        "Many colors"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1760134703597-b1af11ecd019?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "tube",
+      "c": {
+        "a": "#F08A3C",
+        "b": "#FFD2A8"
+      },
+      "order": 1,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "glass-hand-pipes-3",
+      "cat": "glass",
+      "name": "Glass Hand Pipes",
+      "desc": "Pocket-size spoon pipes in solid, swirl and color-changing glass.",
+      "specs": [
+        "3–5 in"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1611095237852-5d9f160277cc?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "spoon",
+      "c": {
+        "a": "#7A5CFA",
+        "b": "#FF8FD0"
+      },
+      "order": 2,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "bubblers-4",
+      "cat": "glass",
+      "name": "Bubblers",
+      "desc": "Hand pipe and water pipe in one. Small, smooth and easy to carry.",
+      "specs": [
+        "5–7 in",
+        "Built-in water"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1645330553970-a2c8eacc918a?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "bubbler",
+      "c": {
+        "a": "#E2569A",
+        "b": "#FFC2DE"
+      },
+      "order": 3,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "downstems-bowls-and-parts-5",
+      "cat": "glass",
+      "name": "Downstems, Bowls & Parts",
+      "desc": "Replacement downstems, slide bowls and screens for most pieces.",
+      "specs": [
+        "14mm",
+        "18mm"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1697018636636-2687e6c441a2?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "downstem",
+      "c": {
+        "a": "#5A7BFF",
+        "b": "#C6D3FF"
+      },
+      "order": 4,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "wooden-smoking-pipes-6",
+      "cat": "glass",
+      "name": "Wooden Smoking Pipes",
+      "desc": "Classic wood and briar pipes for tobacco.",
+      "specs": [
+        "Briar",
+        "Wood"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1545114687-ab1c9f9fc260?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "spoon",
+      "c": {
+        "a": "#7B4A2B",
+        "b": "#B9852A"
+      },
+      "order": 5,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "box-mod-kits-7",
+      "cat": "vapes",
+      "name": "Box Mod Kits",
+      "desc": "Adjustable-wattage mods with tanks for bigger clouds and more control.",
+      "specs": [
+        "Adjustable"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1530745342582-0795f23ec976?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "pod",
+      "c": {
+        "a": "#B5222E",
+        "b": "#2E2A3A"
+      },
+      "order": 0,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "compact-mods-8",
+      "cat": "vapes",
+      "name": "Compact Mods",
+      "desc": "Small, simple mods that fit in a pocket.",
+      "specs": [
+        "Pocket size"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1545095088-26a59e3f2717?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "pod",
+      "c": {
+        "a": "#8A8FA0",
+        "b": "#B7BCCB"
+      },
+      "order": 1,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "pod-systems-9",
+      "cat": "vapes",
+      "name": "Pod Systems",
+      "desc": "Rechargeable pod devices with refillable or pre-filled pods.",
+      "specs": [
+        "USB-C",
+        "Refillable"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1715613814310-495d5f4256a2?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "pod",
+      "c": {
+        "a": "#3B3552",
+        "b": "#B98CFF"
+      },
+      "order": 2,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "vape-pens-10",
+      "cat": "vapes",
+      "name": "Vape Pens",
+      "desc": "Slim pen-style devices that are easy to use and carry.",
+      "specs": [
+        "Slim"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1596496883982-dcc6628d0e8d?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "disposable",
+      "c": {
+        "a": "#D9A640",
+        "b": "#C9C9D3"
+      },
+      "order": 3,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "e-liquid-11",
+      "cat": "vapes",
+      "name": "E-Liquid",
+      "desc": "Bottled freebase and salt nic e-liquid in many flavors.",
+      "specs": [
+        "30–60 ml",
+        "Many flavors"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1618589036063-e78447db6936?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "eliquid",
+      "c": {
+        "a": "#E2569A",
+        "b": "#FFB347"
+      },
+      "order": 4,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "starter-kits-and-devices-12",
+      "cat": "vapes",
+      "name": "Starter Kits & Devices",
+      "desc": "A range of devices for first-timers and experienced vapers. Ask us to compare.",
+      "specs": [
+        "Coils",
+        "Pods",
+        "Kits"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1579165466814-e646cfa4a3be?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "pod",
+      "c": {
+        "a": "#4E36C9",
+        "b": "#2A1F6E"
+      },
+      "order": 5,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "modern-hookahs-13",
+      "cat": "hookah",
+      "name": "Modern Hookahs",
+      "desc": "Stainless and aluminum hookahs with a glass base and a clean draw.",
+      "specs": [
+        "Stainless",
+        "Glass base"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1511302188604-d1d5ba206381?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "hookah",
+      "c": {
+        "a": "#8A8FA0",
+        "b": "#2E2A3A"
+      },
+      "order": 0,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "classic-hookahs-14",
+      "cat": "hookah",
+      "name": "Classic Hookahs",
+      "desc": "Traditional-style hookahs with a hose and bowl included.",
+      "specs": [
+        "Complete set"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1587740851725-3d3e64e9f19e?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "hookah",
+      "c": {
+        "a": "#B5222E",
+        "b": "#2E2A3A"
+      },
+      "order": 1,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "decorative-hookahs-15",
+      "cat": "hookah",
+      "name": "Decorative Hookahs",
+      "desc": "Ornate hand-finished pieces that look as good on a shelf as on the table.",
+      "specs": [
+        "Ornate"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1765293995398-bdb4d7c13e74?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "hookah",
+      "c": {
+        "a": "#C2187A",
+        "b": "#D9A640"
+      },
+      "order": 2,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "shisha-flavors-16",
+      "cat": "hookah",
+      "name": "Shisha Flavors",
+      "desc": "Popular flavors like double apple, mint and mixed fruit.",
+      "specs": [
+        "50g",
+        "250g"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1635547821500-77542481940c?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "tin",
+      "c": {
+        "a": "#7A1E3A",
+        "b": "#E8473D"
+      },
+      "order": 3,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "coconut-charcoal-17",
+      "cat": "hookah",
+      "name": "Coconut Charcoal",
+      "desc": "Natural cubes that light evenly and burn long with little ash.",
+      "specs": [
+        "1 kg box"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1774881191514-200d159a6589?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "charcoal",
+      "c": {
+        "a": "#3F6B3A",
+        "b": "#2C4D28"
+      },
+      "order": 4,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "hoses-bowls-and-parts-18",
+      "cat": "hookah",
+      "name": "Hoses, Bowls & Parts",
+      "desc": "Washable hoses, clay and silicone bowls, trays and grommets.",
+      "specs": [
+        "Silicone",
+        "Clay"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1574238752695-675b86d49267?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "hose",
+      "c": {
+        "a": "#2E2A3A",
+        "b": "#D9A640"
+      },
+      "order": 5,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "4-piece-metal-grinders-19",
+      "cat": "grinders",
+      "name": "4-Piece Metal Grinders",
+      "desc": "Aluminum grinders with sharp teeth, a screen and a catch chamber.",
+      "specs": [
+        "55–63 mm"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1705509894425-5abc9558c5cd?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "grinder",
+      "c": {
+        "a": "#8A8FA0",
+        "b": "#B7BCCB"
+      },
+      "order": 0,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "pocket-grinders-20",
+      "cat": "grinders",
+      "name": "Pocket Grinders",
+      "desc": "Small, colorful grinders that fit in a pocket.",
+      "specs": [
+        "40 mm"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1513114412776-6169617cdcf3?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "grinder",
+      "c": {
+        "a": "#3FB86A",
+        "b": "#A8E6B8"
+      },
+      "order": 1,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "rolling-trays-21",
+      "cat": "grinders",
+      "name": "Rolling Trays",
+      "desc": "Metal trays with raised edges in several sizes and designs.",
+      "specs": [
+        "Small",
+        "Large"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1630074734301-5d0c4e345dd1?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "tray",
+      "c": {
+        "a": "#8A8FA0",
+        "b": "#C9C9D3"
+      },
+      "order": 2,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "airtight-storage-jars-22",
+      "cat": "grinders",
+      "name": "Airtight Storage Jars",
+      "desc": "Glass jars with tight lids that keep things fresh and odor-free.",
+      "specs": [
+        "Glass",
+        "Sealed lid"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1622428051717-dcd8412959de?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "jar",
+      "c": {
+        "a": "#3FB8A8",
+        "b": "#2E2A3A"
+      },
+      "order": 3,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "disposable-lighters-23",
+      "cat": "grinders",
+      "name": "Disposable Lighters",
+      "desc": "Everyday lighters in lots of colors, sold single or by the box.",
+      "specs": [
+        "Singles",
+        "Boxes"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1520931061294-db3e762a9273?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "lighter",
+      "c": {
+        "a": "#2B7FD6",
+        "b": "#9FE3FF"
+      },
+      "order": 4,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "flip-top-lighters-24",
+      "cat": "grinders",
+      "name": "Flip-Top Lighters",
+      "desc": "Refillable metal flip-top lighters and lighter fluid.",
+      "specs": [
+        "Refillable"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1576969500732-12cc9992a5f4?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "lighter",
+      "c": {
+        "a": "#8A8FA0",
+        "b": "#C9C9D3"
+      },
+      "order": 5,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "rolling-papers-25",
+      "cat": "tobacco",
+      "name": "Rolling Papers",
+      "desc": "Thin, slow-burning papers in single-wide, 1¼ and king size.",
+      "specs": [
+        "1¼",
+        "King size"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1598052162797-ba3530cc75b1?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "papers",
+      "c": {
+        "a": "#2E2A3A",
+        "b": "#D9A640"
+      },
+      "order": 0,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "premium-cigars-26",
+      "cat": "tobacco",
+      "name": "Premium Cigars",
+      "desc": "Hand-rolled cigars sold by the stick or the box.",
+      "specs": [
+        "Singles",
+        "Boxes"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1777880015670-c82610e59233?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "cigarillo",
+      "c": {
+        "a": "#7B4A2B",
+        "b": "#D9A640"
+      },
+      "order": 1,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "cigar-cutters-and-ashtrays-27",
+      "cat": "tobacco",
+      "name": "Cigar Cutters & Ashtrays",
+      "desc": "Cutters, punches and ashtrays to go with your cigars.",
+      "specs": [
+        "Cutters",
+        "Ashtrays"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1547652577-b4fe2f34d7ee?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "cigarillo",
+      "c": {
+        "a": "#2E2A3A",
+        "b": "#D9A640"
+      },
+      "order": 2,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "cigarillos-28",
+      "cat": "tobacco",
+      "name": "Cigarillos",
+      "desc": "Single and multi-pack cigarillos in several flavors.",
+      "specs": [
+        "Singles",
+        "Packs"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1605570382235-7a873a20469e?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "cigarillo",
+      "c": {
+        "a": "#B5222E",
+        "b": "#D9A640"
+      },
+      "order": 3,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "pipe-tobacco-29",
+      "cat": "tobacco",
+      "name": "Pipe Tobacco",
+      "desc": "Loose pipe tobacco in pouches and tins.",
+      "specs": [
+        "Pouches",
+        "Tins"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1612659429508-b429d6b07ac1?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "pouch",
+      "c": {
+        "a": "#7B4A2B",
+        "b": "#3F6B3A"
+      },
+      "order": 4,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "tobacco-pipes-30",
+      "cat": "tobacco",
+      "name": "Tobacco Pipes",
+      "desc": "Briar and wooden tobacco pipes, plus cleaners and tampers.",
+      "specs": [
+        "Briar",
+        "Tampers"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1547402270-dadfe30b55b3?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "spoon",
+      "c": {
+        "a": "#7B4A2B",
+        "b": "#2E2A3A"
+      },
+      "order": 5,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "kratom-powder-31",
+      "cat": "botanicals",
+      "name": "Kratom Powder",
+      "desc": "Labeled powder in several sizes. Ask staff about current options.",
+      "specs": [
+        "Labeled sizes"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1565802700474-1c8b57596859?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "pouch",
+      "c": {
+        "a": "#2E6B3A",
+        "b": "#8BD17C"
+      },
+      "order": 0,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "kratom-capsules-32",
+      "cat": "botanicals",
+      "name": "Kratom Capsules",
+      "desc": "Pre-measured capsules in sealed, labeled bottles.",
+      "specs": [
+        "Sealed bottles"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1763668331599-487470fb85b2?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "capsules",
+      "c": {
+        "a": "#F4F1EA",
+        "b": "#2E6B3A"
+      },
+      "order": 1,
+      "updated": "2026-10-20T23:06:48.847Z"
+    },
+    {
+      "id": "botanical-teas-33",
+      "cat": "botanicals",
+      "name": "Botanical Teas",
+      "desc": "Loose-leaf herbal blends with full ingredient lists.",
+      "specs": [
+        "Loose leaf"
+      ],
+      "price": null,
+      "qty": null,
+      "low": 3,
+      "visible": true,
+      "img": "https://images.unsplash.com/photo-1653937855510-ec3fd2036d98?auto=format&fit=crop&w=720&h=540&q=70",
+      "type": "pouch",
+      "c": {
+        "a": "#B58A3A",
+        "b": "#5E8F3A"
+      },
+      "order": 2,
+      "updated": "2026-10-20T23:06:48.847Z"
+    }
+  ]
+}

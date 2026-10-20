@@ -163,6 +163,16 @@ section[id]{scroll-margin-top:72px}
 .specs{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
 .specs li{font:500 12px var(--f-mono);padding:3px 9px;border-radius:999px;background:var(--surface-2)}
 .prod .btn{align-self:flex-start;margin-top:4px}
+.stock{position:absolute;top:10px;left:10px;font:600 11.5px var(--f-body);letter-spacing:.02em;padding:4px 10px;border-radius:999px;background:var(--surface);color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.18);display:inline-flex;align-items:center;gap:6px}
+.stock::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.s-in{color:var(--ok)}.s-low{color:#C27C0E}.s-out{color:var(--closed)}
+.prod.is-out .pic img,.prod.is-out .pic svg{filter:grayscale(.85);opacity:.75}
+.prod-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:4px}
+.prod-foot .btn{margin:0}
+.price{font:500 18px var(--f-display);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.none{grid-column:1/-1;color:var(--muted);padding:24px 4px}
+.mosaic.one,.mosaic.empty{grid-template-columns:1fr}
+
 @media (max-width:900px){.cats,.products{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:600px){.cats{grid-template-columns:1fr}.catalog{padding:16px}.products{gap:10px}.prod-body{padding:12px 12px 14px}.prod h4{font-size:14px}.prod p{font-size:13px}.specs{display:none}}
 
@@ -557,9 +567,10 @@ section[id]{scroll-margin-top:72px}
     capsules:function(c){var cap=function(x,y,r){return '<g transform="rotate('+r+' '+x+' '+y+')"><rect x="'+(x-8)+'" y="'+(y-20)+'" width="16" height="40" rx="8" fill="#F2EBDA"/><rect x="'+(x-8)+'" y="'+(y-20)+'" width="16" height="20" rx="8" fill="'+c.b+'"/></g>';};return sh(56)+'<rect x="70" y="40" width="60" height="26" rx="5" fill="'+c.b+'"/><rect x="66" y="62" width="68" height="112" rx="12" fill="'+c.a+'"/><rect x="72" y="92" width="56" height="50" rx="6" fill="#fff" opacity=".9"/><path d="M80 108h40M80 120h28" stroke="'+c.b+'" stroke-width="4" stroke-linecap="round"/>'+cap(46,166,70)+cap(158,164,-60);},
     cigarillo:function(c){var st=function(x,h){return '<rect x="'+x+'" y="'+(70-h)+'" width="16" height="'+(h+20)+'" rx="7" fill="#7B4A2B"/><rect x="'+x+'" y="'+(70-h+10)+'" width="16" height="7" fill="'+c.b+'"/>';};return sh(56)+st(66,34)+st(84,44)+st(102,30)+st(120,40)+'<rect x="54" y="70" width="92" height="108" rx="6" fill="'+c.a+'"/><rect x="66" y="100" width="68" height="40" rx="5" fill="#fff" opacity=".9"/><path d="M76 114h48M76 126h30" stroke="'+c.a+'" stroke-width="4" stroke-linecap="round"/>';}
   };
-  function art(p){return p.img?'<img src="'+p.img+'" alt="'+p.n+'" loading="lazy">':'<svg viewBox="0 0 200 200" role="img" aria-label="'+p.n+'">'+ART[p.type](p.c)+'</svg>';}
+  function art(p){return p.img?'<img src="'+p.img+'" alt="'+p.n+'" loading="lazy">':'<svg viewBox="0 0 200 200" role="img" aria-label="'+esc(p.n)+'">'+(ART[p.type]||ART.pouch)(p.c)+'</svg>';}
 
   /* Photos: free Unsplash images (unsplash.com/license). Swap any  img  for the shop's own photo, e.g. img:"photos/beaker.jpg". */
+  function esc(t){return String(t==null?'':t).replace(/[&<>"']/g,function(ch){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch];});}
   function U(id){return 'https://images.unsplash.com/photo-'+id+'?auto=format&fit=crop&w=720&h=540&q=70';}
   var CATS=[
     {id:'glass',name:'Glass & Pipes',glow:'#7C9CFF',desc:'Water pipes, hand pipes and bubblers in thick glass, plus classic wooden pipes.',items:[
@@ -602,26 +613,34 @@ section[id]{scroll-margin-top:72px}
       {n:'Kratom Capsules',img:U('1763668331599-487470fb85b2'),type:'capsules',c:{a:'#F4F1EA',b:'#2E6B3A'},d:'Pre-measured capsules in sealed, labeled bottles.',s:['Sealed bottles']},
       {n:'Botanical Teas',img:U('1653937855510-ec3fd2036d98'),type:'pouch',c:{a:'#B58A3A',b:'#5E8F3A'},d:'Loose-leaf herbal blends with full ingredient lists.',s:['Loose leaf']}]}
   ];
-  window.wcFallback=function(img){var p=CATS[+img.dataset.ci].items[+img.dataset.pi];var w=document.createElement('span');w.innerHTML='<svg viewBox="0 0 200 200" role="img" aria-label="'+p.n+'">'+ART[p.type](p.c)+'</svg>';var holder=img.parentNode;holder.classList.add('is-art');holder.replaceChild(w.firstChild,img);};
-  function photo(ci,pi,cls){var p=CATS[ci].items[pi];return p.img?'<img class="'+(cls||'')+'" src="'+p.img+'" alt="'+p.n+'" loading="lazy" decoding="async" data-ci="'+ci+'" data-pi="'+pi+'" onerror="wcFallback(this)">':'<svg viewBox="0 0 200 200" role="img" aria-label="'+p.n+'">'+ART[p.type](p.c)+'</svg>';}
+  window.wcFallback=function(img){var p=CATS[+img.dataset.ci].items[+img.dataset.pi];var w=document.createElement('span');w.innerHTML='<svg viewBox="0 0 200 200" role="img" aria-label="'+esc(p.n)+'">'+(ART[p.type]||ART.pouch)(p.c)+'</svg>';var holder=img.parentNode;holder.classList.add('is-art');holder.replaceChild(w.firstChild,img);};
+  function photo(ci,pi,cls){var p=CATS[ci].items[pi];return p.img?'<img class="'+(cls||'')+'" src="'+esc(p.img)+'" alt="'+esc(p.n)+'" loading="lazy" decoding="async" data-ci="'+ci+'" data-pi="'+pi+'" onerror="wcFallback(this)">':'<svg viewBox="0 0 200 200" role="img" aria-label="'+esc(p.n)+'">'+(ART[p.type]||ART.pouch)(p.c)+'</svg>';}
 
   var catsEl=document.getElementById('cats'),tabsEl=document.getElementById('tabs'),prodEl=document.getElementById('products'),introEl=document.getElementById('catIntro');
-  function cover(ci){return '<span class="mosaic"><span class="m-big">'+photo(ci,0)+'</span><span class="m-sm">'+photo(ci,1)+'</span><span class="m-sm">'+photo(ci,2)+'</span></span>';}
-  catsEl.innerHTML=CATS.map(function(c,ci){
-    return '<a class="cat" href="#'+c.id+'" data-cat="'+c.id+'" id="card-'+c.id+'"><span class="cover" style="--glow:'+c.glow+'">'+cover(ci)+'</span><span class="cat-body"><span class="cat-title">'+c.name.replace('&','&amp;')+'</span><p>'+c.desc+'</p><span class="see">See '+c.items.length+' products <svg class="ic" style="width:16px;height:16px"><use href="#i-arrow-r"/></svg></span></span></a>';
-  }).join('');
-  tabsEl.innerHTML=CATS.map(function(c){return '<button class="tab" role="tab" id="tab-'+c.id+'" data-cat="'+c.id+'" aria-selected="false" aria-controls="products">'+c.name.replace('&','&amp;')+' <small>'+c.items.length+'</small></button>';}).join('');
-
+  var currentCat=null;
+  var STOCK={in:['In stock','s-in'],low:['Low stock','s-low'],out:['Out of stock','s-out']};
+  function money(v){return v===null||v===undefined||v===''?'':'$'+Number(v).toFixed(2);}
+  function cover(ci){var n=CATS[ci].items.length;if(!n)return '<span class="mosaic empty"><span class="m-big"></span></span>';
+    var a=photo(ci,0),b=photo(ci,Math.min(1,n-1)),c=photo(ci,Math.min(2,n-1));
+    return n<3?'<span class="mosaic one"><span class="m-big">'+a+'</span></span>':'<span class="mosaic"><span class="m-big">'+a+'</span><span class="m-sm">'+b+'</span><span class="m-sm">'+c+'</span></span>';}
+  function renderShell(){
+    catsEl.innerHTML=CATS.map(function(c,ci){
+      var n=c.items.length;
+      return '<a class="cat" href="#'+c.id+'" data-cat="'+c.id+'" id="card-'+c.id+'"><span class="cover" style="--glow:'+c.glow+'">'+cover(ci)+'</span><span class="cat-body"><span class="cat-title">'+esc(c.name)+'</span><p>'+esc(c.desc)+'</p><span class="see">'+(n?'See '+n+' product'+(n===1?'':'s'):'Ask in store')+' <svg class="ic" style="width:16px;height:16px"><use href="#i-arrow-r"/></svg></span></span></a>';
+    }).join('');
+    tabsEl.innerHTML=CATS.map(function(c){return '<button class="tab" role="tab" id="tab-'+c.id+'" data-cat="'+c.id+'" aria-selected="false" aria-controls="products">'+esc(c.name)+' <small>'+c.items.length+'</small></button>';}).join('');
+  }
   function setCat(id,scroll){
-    var ci=Math.max(0,CATS.findIndex(function(c){return c.id===id;}));var cat=CATS[ci];
+    var ci=Math.max(0,CATS.findIndex(function(c){return c.id===id;}));var cat=CATS[ci];currentCat=cat.id;
     tabsEl.querySelectorAll('.tab').forEach(function(t){t.setAttribute('aria-selected',String(t.dataset.cat===cat.id));});
     catsEl.querySelectorAll('.cat').forEach(function(a){a.setAttribute('aria-current',String(a.dataset.cat===cat.id));});
     prodEl.setAttribute('aria-labelledby','tab-'+cat.id);
-    introEl.innerHTML='<div><span class="label">'+cat.items.length+' products</span><h3>'+cat.name.replace('&','&amp;')+'</h3><p>'+cat.desc+'</p></div>'+(cat.law?'<p class="law">'+cat.law+'</p>':'');
-    prodEl.innerHTML=cat.items.map(function(p,pi){
-      return '<article class="prod"><div class="pic" style="--glow:'+p.c.a+'">'+photo(ci,pi)+'</div><div class="prod-body"><h4>'+p.n+'</h4><p>'+p.d+'</p><ul class="specs">'+p.s.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul><button class="btn btn-line btn-sm ask" data-name="'+p.n+'"><svg class="ic"><use href="#i-phone"/></svg>Ask about it</button></div></article>';
-    }).join('');
-    var sel=document.getElementById('tab-'+cat.id);if(sel&&sel.scrollIntoView&&!scroll)sel.parentNode.scrollLeft=sel.offsetLeft-16;
+    introEl.innerHTML='<div><span class="label">'+cat.items.length+' product'+(cat.items.length===1?'':'s')+'</span><h3>'+esc(cat.name)+'</h3><p>'+esc(cat.desc)+'</p></div>'+(cat.law?'<p class="law">'+esc(cat.law)+'</p>':'');
+    prodEl.innerHTML=cat.items.length?cat.items.map(function(p,pi){
+      var st=STOCK[p.status],price=money(p.price);
+      return '<article class="prod'+(p.status==='out'?' is-out':'')+'"><div class="pic" style="--glow:'+p.c.a+'">'+photo(ci,pi)+(st?'<span class="stock '+st[1]+'">'+st[0]+'</span>':'')+'</div><div class="prod-body"><h4>'+esc(p.n)+'</h4><p>'+esc(p.d)+'</p><ul class="specs">'+(p.s||[]).map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul><div class="prod-foot">'+(price?'<span class="price">'+price+'</span>':'')+'<button class="btn btn-line btn-sm ask" data-name="'+esc(p.n)+'"><svg class="ic"><use href="#i-phone"/></svg>Ask about it</button></div></div></article>';
+    }).join(''):'<p class="none">Nothing listed here right now. Call (904) 410-4089 to ask what we have in store.</p>';
+    var sel=document.getElementById('tab-'+cat.id);if(sel&&!scroll)sel.parentNode.scrollLeft=sel.offsetLeft-16;
     if(scroll)document.getElementById('catalog').scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'start'});
   }
   var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -629,10 +648,21 @@ section[id]{scroll-margin-top:72px}
   tabsEl.addEventListener('click',function(e){var t=e.target.closest('.tab');if(t)setCat(t.dataset.cat,false);});
   tabsEl.addEventListener('keydown',function(e){if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;var ts=[].slice.call(tabsEl.querySelectorAll('.tab')),i=ts.indexOf(document.activeElement);if(i<0)return;var n=ts[(i+(e.key==='ArrowRight'?1:-1)+ts.length)%ts.length];n.focus();setCat(n.dataset.cat,false);});
   prodEl.addEventListener('click',function(e){var b=e.target.closest('.ask');if(b)show('Call (904) 410-4089 and ask for: '+b.dataset.name);});
-  var startCat=(location.hash||'').slice(1);
-  setCat(CATS.some(function(c){return c.id===startCat;})?startCat:'glass',false);
   document.querySelectorAll('[data-jump]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();setCat(a.dataset.jump,true);});});
-  if(CATS.some(function(c){return c.id===startCat;}))setTimeout(function(){setCat(startCat,true);},50);
+  var startCat=(location.hash||'').slice(1);
+  var hasStart=CATS.some(function(c){return c.id===startCat;});
+  renderShell();setCat(hasStart?startCat:'glass',false);
+  if(hasStart)setTimeout(function(){setCat(startCat,true);},50);
+
+  /* Live inventory from the shop's admin page */
+  if(window.fetch&&location.protocol!=='file:'){
+    fetch('/api/catalog',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(data){
+      if(!data||!data.categories||!data.categories.length)return;
+      CATS=data.categories.map(function(c){return {id:c.id,name:c.name,desc:c.desc,glow:c.glow||'#7C9CFF',law:c.law,items:c.items.map(function(p){
+        return {n:p.name,d:p.desc,s:p.specs,img:p.img,type:ART[p.type]?p.type:(c.defaultType||'pouch'),c:p.c||{a:c.glow||'#4E36C9',b:'#2E2A3A'},price:p.price,status:p.status};})};});
+      renderShell();setCat(CATS.some(function(c){return c.id===currentCat;})?currentCat:CATS[0].id,false);
+    }).catch(function(){});
+  }
 
   /* ---------- night sky with drifting white clouds ---------- */
   var cv=document.getElementById('sky'),ctx=cv.getContext('2d');
