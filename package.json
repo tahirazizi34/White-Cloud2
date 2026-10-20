@@ -1,0 +1,9 @@
+{
+  "name": "white-cloud-2-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "White Cloud 2 smoke shop website (Starke, FL)",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}
